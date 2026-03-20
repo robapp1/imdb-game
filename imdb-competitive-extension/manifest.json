@@ -1,14 +1,26 @@
 {
     "manifest_version": 3,
-    "name": "IMDB Competitive Click Race",
+    "name": "IMDB Click Race: Six Degrees of Kevin Bacon",
     "version": "1.0",
-    "description": "Two-player IMDB actor-click race (Start / Join)",
+    "description": "Multiplayer IMDB actor-click race — create or join a lobby with up to 6 players and race to connect two actors through their filmographies.",
     "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": [
       "https://www.imdb.com/*",
       "https://imdb-game-343f1-default-rtdb.firebaseio.com/",
       "https://oracleofbacon.org/*"
     ],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
     "background": {
       "service_worker": "background.js"
     },

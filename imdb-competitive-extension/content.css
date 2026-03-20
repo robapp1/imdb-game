@@ -17,6 +17,10 @@ html{
     background: #0f1655;
 }
 
+.danger-button:hover {
+    background: #b91c1c;
+}
+
 .yellow-button {
     margin: 2px;
     margin-bottom: 20px;
@@ -39,6 +43,8 @@ html{
     right: 20px;
     width: 360px;
     max-width: calc(100% - 40px);
+    min-height: 420px;
+    max-height: 82vh;
     background: linear-gradient(295deg,rgba(110, 88, 10, 1) 0%, rgba(245, 197, 24, 1) 100%);
     color: #000;
     padding: 12px;
@@ -62,20 +68,21 @@ html{
 #winnerbox {
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background: linear-gradient(295deg, rgba(62, 73, 173, 1) 0%, rgba(90, 101, 196, 1) 100%);
     color: #f5c518;
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
     text-align: center;
     font-size: 20px;
     padding: 12px;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 
 #winnerText {
@@ -84,12 +91,14 @@ html{
     margin-bottom: 8px
 }
 
-#leaderboardList { 
+#leaderboardList {
     font-size: 0.8em;
     font-weight: normal;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    max-width: 90%;
+    gap: 4px;
+    width: 100%;
+    max-width: 96%;
     margin: 0 auto;
+    text-align: left;
 }

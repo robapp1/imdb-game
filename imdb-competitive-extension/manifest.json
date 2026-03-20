@@ -6,20 +6,18 @@
     "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": [
       "https://www.imdb.com/*",
-      "https://imdb-game-343f1-default-rtdb.firebaseio.com/"
+      "https://imdb-game-343f1-default-rtdb.firebaseio.com/",
+      "https://oracleofbacon.org/*"
     ],
+    "background": {
+      "service_worker": "background.js"
+    },
     "content_scripts": [
       {
         "matches": ["https://www.imdb.com/*"],
-        "js": ["content.js"],
+        "js": ["actors.js", "content.js"],
         "css": ["content.css"],
         "run_at": "document_idle"
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": ["actors.json"],
-        "matches": ["https://www.imdb.com/*"]
       }
     ]
   }
